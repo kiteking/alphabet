@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet Drawing App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DejaVu+Sans:400,700">
+</head>
+<body>
+  <div id="app">
+    <div id="toolbar">
+      <button class="color-btn" id="red" onclick="changeColor('red')"></button>
+      <button class="color-btn" id="green" onclick="changeColor('green')"></button>
+      <button class="color-btn" id="blue" onclick="changeColor('blue')"></button>
+      <button class="color-btn" id="black" onclick="changeColor('black')"></button>
+    </div>
+    <div id="letter-container">
+      <span id="letter"></span>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+    <div id="controls">
+      <button id="eraser" onclick="clearCanvas()">Eraser</button>
+      <button id="speaker" onclick="speakLetter()">🔊</button>
+      <button id="next" onclick="nextPage()">Next</button>
+    </div>
+    <div id="markPage" style="display: none;">
+      <button id="showMarks" onclick="showMarks()">Marks</button>
+      <p id="marksDisplay"></p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
